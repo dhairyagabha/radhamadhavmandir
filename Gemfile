@@ -42,6 +42,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+group :production do
+  gem 'webmanager', :git => 'git@github.com:dhairyagabha/webmanager.git'
+end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
