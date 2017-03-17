@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/dhairyagabha/webmanager.git
-  revision: 82bd3e28a180deb24fe0c8ff6faccccf9d2742cc
+  revision: c1ed0ea97c46de6184515e8e917a4b2c88c1d634
   specs:
     webmanager (0.1.0)
       devise
