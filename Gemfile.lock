@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:dhairyagabha/webmanager.git
+  remote: https://github.com/dhairyagabha/webmanager.git
   revision: 82bd3e28a180deb24fe0c8ff6faccccf9d2742cc
   specs:
     webmanager (0.1.0)

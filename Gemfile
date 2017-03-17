@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'webmanager', :git => 'git@github.com:dhairyagabha/webmanager.git', group: :production
+gem 'webmanager', :github => 'dhairyagabha/webmanager'
 # gem 'webmanager', path: '~/sites/webmanager', group: :development
 gem 'trix'
 group :development, :test do
