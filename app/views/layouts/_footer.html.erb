@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="container">
     <div class="row align-items-end">
-      <div class="col-6">
+      <div class="col-md-12 col-lg-6">
         <%= image_tag 'https://placeimg.com/100/100/arch', class: 'rounded mx-auto d-block' %>
         <div itemscope itemtype="http://schema.org/ContactPoint">
           <p><h5 class="text-center">Shri Radha Madhav Mandir</h5></p>
@@ -15,7 +15,7 @@
           </p>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-md-12 col-lg-6">
         <%= form_tag('webmanager/newsletter_receivers', method: 'post') do -%>
             <div class="form-group">
               <%= label_tag :email,'Sign up for an events newsletter: ' %>
