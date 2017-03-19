@@ -1,0 +1,24 @@
+$main-color: #FF8800;
+$white: #FFFFFF;
+$accent-color: #FFA726;
+body {
+  nav{
+    background-color: $main-color;
+  }
+  > .content {
+    margin-top: 55px;
+    > .container {
+      margin-top: 20px;
+    }
+  }
+  footer{
+    margin-top: 30px;
+    background-color: $main-color;
+    padding-top: 15px;
+    color: $white;
+    a{
+      text-decoration: none !important;
+      color: $white;
+    }
+  }
+}

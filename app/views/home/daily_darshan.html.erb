@@ -1,0 +1,25 @@
+<div class="container">
+  <button id="add">Click me!</button>
+  <div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 100, "itemSelector": ".box", "gutter" : 5  }'>
+  </div>
+</div>
+
+<script>
+  var data = ["Lorem ipsum dolor.",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aut amet libero enim id. Assumenda inventore amet dolor eos",          "Lorem ipsum dolor sit amet, omnis?"
+  ];
+  $('#add').click(function(){debugger;
+    var $el = $("<div class='box'>"+data[(new Date()).getSeconds()%3]+"</div>");
+    $('#container').append($el).masonry('appended', $el);
+  });
+</script>
+
+<style>
+  .box{
+    background-color: yellow;
+    width: 100px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+</style>

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/dhairyagabha/webmanager.git
-  revision: c1ed0ea97c46de6184515e8e917a4b2c88c1d634
+  revision: c39b136fadba312fb2386988386094c983113eab
   specs:
     webmanager (0.1.0)
       devise
@@ -48,7 +48,12 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autoprefixer-rails (6.7.7)
+      execjs
     bcrypt (3.1.11)
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -119,6 +124,11 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.0.2)
       actionpack (= 5.0.2)
       activesupport (= 5.0.2)
@@ -160,7 +170,7 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.1.7)
+    uglifier (3.1.8)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
@@ -177,6 +187,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap (~> 4.0.0.alpha6)
   byebug
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
@@ -185,6 +196,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.1)
+  rails_12factor
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

@@ -9345,12 +9345,12 @@ main {
 }
 /*
   Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
+  They will automatically be included in application.scss.
 */
 
 /*
   Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
+  They will automatically be included in application.scss.
 */
 
 /*
@@ -9481,7 +9481,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 }
 /*
   Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
+  They will automatically be included in application.scss.
 */
 
 /*!
@@ -24015,11 +24015,11 @@ ul,ul li{list-style-type:none}.btn,.hiddendiv{word-wrap:break-word}.btn-flat,a,a
 }
 /*
   Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
+  They will automatically be included in application.scss.
 */
 
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * This is a manifest file that'll be compiled into application.scss, which will include all the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,

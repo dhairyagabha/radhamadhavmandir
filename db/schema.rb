@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314015540) do
+ActiveRecord::Schema.define(version: 20170319012424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20170314015540) do
     t.string   "send_extra_to"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "webmanager_newsletter_receivers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.boolean  "event_notification"
   end
 
   create_table "webmanager_notes", force: :cascade do |t|
