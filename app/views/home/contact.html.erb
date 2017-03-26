@@ -1,0 +1,28 @@
+<div class="jumbotron jumbotron-fluid jumbotron-no-padding">
+  <img src="https://placeimg.com/1446/400/nature "/>
+</div>
+<div class="container primary-font">
+  <div class="col-md-12 col-lg-8 offset-lg-2">
+    <h3>Contact Us</h3>
+    <p><%= @contact.description %></p>
+    <%= form_for(Webmanager::FormResponse.new, url:'/webmanager/form_responses') do |f| %>
+        <%= f.hidden_field :form_id, value: @contact.id %>
+        <%= f.fields_for :response do |builder|%>
+            <div class="form-group">
+              <% @contact.form_fields.each do |contact_field| %>
+                  <%= render "webmanager/form_fields/#{contact_field.as}", field: contact_field, f: builder %>
+              <% end %>
+            </div>
+        <% end %>
+        <div class="form-group">
+          <%= submit_tag 'Submit', class: 'btn btn-primary' %>
+        </div>
+    <% end -%>
+  </div>
+  <p>
+    <small>
+      <em class="map-notice grey-text">Use <%= image_tag '/assets/map-drawer.svg', style: 'height:16px;' %> icon on the
+        map below to open the menu and see directions from various location to get to the temple.</em></small>
+  </p>
+</div>
+<%= render 'layouts/map' %>

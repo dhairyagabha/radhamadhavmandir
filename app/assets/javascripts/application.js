@@ -15,3 +15,20 @@
 //= require bootstrap
 //= require masonary.min
 //= require_tree .
+
+
+$(document).ready(function () {
+
+    // you want to enable the pointer events only on click;
+
+    $('#map_frame').addClass('scrolloff'); // set the pointer events to none on doc ready
+    $('.map').on('click', function () {
+        $('#map_frame').removeClass('scrolloff'); // set the pointer events true on click
+    });
+
+    // you want to disable pointer events when the mouse leave the canvas area;
+
+    $("#map_frame").mouseleave(function () {
+        $('#map_frame').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
+    });
+});

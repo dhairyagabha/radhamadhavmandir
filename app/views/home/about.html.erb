@@ -1,0 +1,19 @@
+<div class="jumbotron jumbotron-fluid jumbotron-no-padding">
+  <img src="https://placeimg.com/1446/400/tech"/>
+</div>
+<div class="container primary-font">
+  <h3 class="text-center"><%= @about.title.titleize %></h3>
+  <p><%= raw @about.body %></p>
+  <hr>
+  <div class="row align-items-center">
+    <div class="col-sm-12  col-md-3">
+      <img src="https://placeimg.com/450/450/person" class="col-12 rounded-circle"/>
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h3><%= @priest.title.titleize %></h3>
+      <p><%= raw @priest.body %></p>
+    </div>
+  </div>
+  <p><small><em class="map-notice grey-text">Use <%= image_tag '/assets/map-drawer.svg', style:'height:16px;' %> icon on the map below to open the menu and see directions from various location to get to the temple.</em></small></p>
+</div>
+<%= render 'layouts/map' %>
