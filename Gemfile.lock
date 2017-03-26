@@ -1,5 +1,6 @@
-PATH
-  remote: ~/sites/webmanager
+GIT
+  remote: https://github.com/dhairyagabha/webmanager.git
+  revision: eac88834694137fcc7749d72d508d69cca7433c4
   specs:
     webmanager (0.1.0)
       devise
@@ -167,9 +168,9 @@ GEM
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
-    tzinfo (1.2.2)
+    tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    uglifier (3.1.9)
+    uglifier (3.1.10)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
