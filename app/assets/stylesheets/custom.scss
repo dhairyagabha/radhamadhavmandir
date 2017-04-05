@@ -83,3 +83,17 @@ button.navbar-toggler{
 .form-control{
   margin-bottom:10px;
 }
+.calendar thead tr th{
+  text-align: center !important;
+}
+.notmonth{
+  color: #adadad !important;
+}
+.today{
+  background-color: $accent-color;
+  color: #ffffff;
+}
+.event-notification{
+  position: relative;
+  top: -10px;
+}

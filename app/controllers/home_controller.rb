@@ -14,7 +14,9 @@ class HomeController < ApplicationController
   end
 
   def events
-    @events = Webmanager::Event.order(start_date: :desc).first(5)
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @events = Webmanager::Event.where(:start_date => @date.beginning_of_month..@date.end_of_month)
+    @events_by_date = @events.group_by(&:start_date)
   end
 
   def contact

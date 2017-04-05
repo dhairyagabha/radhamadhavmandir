@@ -1,33 +1,53 @@
-<div class="jumbotron jumbotron-fluid jumbotron-no-padding">
-  <img src="https://placeimg.com/1446/400/arch"/>
-</div>
-<div class="container primary-font">
-  <h2>Upcoming Events</h2>
-  <div id="accordion" role="tablist" aria-multiselectable="true">
-    <% @events.each do |event| %>
-        <% id = "#{event.name.downcase.gsub(' ', '_')}_#{event.id}" %>
-        <% id_top = "#{event.name.downcase.gsub(' ', '_')}" %>
-        <div class="card events-card">
-          <div class="card-header" role="tab" id="<%= id_top %>">
-            <h5 class="mb-0 col-12">
-              <a data-toggle="collapse" data-parent="#accordion" href="#<%= id %>" aria-expanded="<%= (event.id == 1) ? true : false %>" aria-controls="<%= id %>">
-                <%= event.name %>
-              </a>
-            </h5>
-          </div>
-
-          <div id="<%= id %>" class="collapse" role="tabpanel" aria-labelledby="<%= id_top %>">
-            <div class="card-block">
-              <div class="clearfix">
-                <p class="float-left"><i class="material-icons">place</i><%= event.location %></p>
-                <p class="float-right">
-                  <i class="material-icons">event</i><%= event.start_date.to_date.to_formatted_s(:long) %> <%= "– #{event.end_date.to_date.to_formatted_s(:long)}" if event.end_date %>
-                </p>
-              </div>
-              <p><%= event.description %></p>
-            </div>
-          </div>
-        </div>
-    <% end %>
+<div class="container primary-font" style="margin-top: 65px !important;">
+  <div class="card col-lg-8 offset-lg-2">
+    <div class="card-block">
+      <h4 class="card-title text-center">
+        <%= link_to '<i class="material-icons">chevron_left</i>'.html_safe, date: @date.prev_month %>
+        <%= @date.strftime("%B %Y") %>
+        <%= link_to '<i class="material-icons">chevron_right</i>'.html_safe, date: @date.next_month %>
+      </h4>
+      <p class="card-text">
+        <%= calendar @date do |date| %>
+            <% if @events_by_date[date] %>
+            <%= date.day %><span class="badge badge-pill badge-success event-notification"><%= @events_by_date[date].count %></span>
+            <% else %>
+            <%= date.day %>
+            <% end %>
+        <% end %>
+      </p>
+    </div>
   </div>
+
+  <h2>Upcoming Events</h2>
+  <% if !@events.empty? %>
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+        <% @events.each do |event| %>
+            <% id = "#{event.name.downcase.gsub(' ', '_')}_#{event.id}" %>
+            <% id_top = "#{event.name.downcase.gsub(' ', '_')}" %>
+            <div class="card events-card">
+              <div class="card-header" role="tab" id="<%= id_top %>">
+                <h5 class="mb-0 col-12">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#<%= id %>" aria-expanded="<%= (event.id == 1) ? true : false %>" aria-controls="<%= id %>">
+                    <%= event.name %>
+                  </a>
+                </h5>
+              </div>
+
+              <div id="<%= id %>" class="collapse" role="tabpanel" aria-labelledby="<%= id_top %>">
+                <div class="card-block">
+                  <div class="clearfix">
+                    <p class="float-left"><i class="material-icons">place</i><%= event.location %></p>
+                    <p class="float-right">
+                      <i class="material-icons">event</i><%= event.start_date.to_date.to_formatted_s(:long) %> <%= "– #{event.end_date.to_date.to_formatted_s(:long)}" if event.end_date %>
+                    </p>
+                  </div>
+                  <p><%= event.description %></p>
+                </div>
+              </div>
+            </div>
+        <% end %>
+      </div>
+  <% else %>
+      <p>No events scheduled for this month yet, please check back later.</p>
+  <% end %>
 </div>
