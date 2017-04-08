@@ -1,9 +1,10 @@
 GIT
   remote: https://github.com/dhairyagabha/webmanager.git
-  revision: 89ba61ff08d6a3903e428e46f6920603f221c248
+  revision: 5f286ee7d35ef594a3334651ce7169989e3d541b
   specs:
     webmanager (0.1.0)
       devise
+      jquery-rails
       rails (~> 5.0.1)
       trix
 
