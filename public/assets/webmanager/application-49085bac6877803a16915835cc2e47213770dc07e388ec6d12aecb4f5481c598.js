@@ -25909,8 +25909,3 @@ this.actionHandler_&&(this.actionElement_.textContent=this.actionText_,this.acti
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-
-
-
-;
