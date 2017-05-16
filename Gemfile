@@ -37,8 +37,7 @@ gem 'rails_12factor'
 gem 'paperclip','~> 5.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-# gem 'webmanager', :github => 'dhairyagabha/webmanager'
-gem "webmanager", path: "~/sites/webmanager"
+gem 'webmanager', :github => 'dhairyagabha/webmanager'
 gem 'trix'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
