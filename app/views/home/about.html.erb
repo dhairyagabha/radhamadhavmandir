@@ -7,7 +7,7 @@
   <hr>
   <div class="row align-items-center">
     <div class="col-sm-12  col-md-3">
-      <img src="https://placeimg.com/450/450/person" class="col-12 rounded-circle"/>
+      <img src="<%= @priest.blog_assets.first.asset.url(:medium) %>" class="col-12 rounded-circle"/>
     </div>
     <div class="col-sm-12 col-md-9">
       <h3><%= @priest.title.titleize %></h3>

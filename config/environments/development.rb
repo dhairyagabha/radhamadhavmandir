@@ -18,7 +18,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => 'public, max-age=172800'
+        'Cache-Control' => 'public, max-age=172800'
     }
   else
     config.action_controller.perform_caching = false
@@ -30,16 +30,16 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: 'radhamadhav.dev' }
+  config.action_mailer.default_url_options = {host: 'radhamadhav.dev'}
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-      address:              'smtp.gmail.com',
-      port:                 587,
-      domain:               'radhamadhav.dev',
-      user_name:            'darthbot.bankofprogrammers@gmail.com',
-      password:             'programmers',
-      authentication:       'plain',
+      address: 'smtp.gmail.com',
+      port: 587,
+      domain: 'radhamadhav.dev',
+      user_name: 'darthbot.bankofprogrammers@gmail.com',
+      password: 'programmers',
+      authentication: 'plain',
       enable_starttls_auto: true
   }
   # Print deprecation notices to the Rails logger.
@@ -55,6 +55,16 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+
+
+  config.paperclip_defaults = {
+      :storage => :s3,
+      :bucket => 'radhamadhav',
+      :region => 'us-east-1',
+      :s3_host_name => 's3.us-east-2.amazonaws.com',
+      :s3_credentials => "#{Rails.root}/config/aws.yml",
+  }
+
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

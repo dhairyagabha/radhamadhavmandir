@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require masonary.min
+//= require jquery.socialfeed.js
 //= require_tree .
 
 

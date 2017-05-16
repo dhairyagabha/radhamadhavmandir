@@ -1,11 +1,17 @@
 <%= render 'layouts/carousel' %>
-<% @article = @articles.tagged_with('home').first %>
-<div class="container">
-  <h3 class="text-center"><%= @article.title.titleize %></h3>
-  <div class="row align-items-center">
-    <%= image_tag 'https://placeimg.com/567/447/nature', class: 'col-sm-12 col-md-6 responsive-img' %>
-    <div class="col-sm-12 col-md-6">
-      <%= raw @article.body %></p>
-    </div>
-  </div>
+
+<div class="container primary-font">
+  <% @articles.each do |article| %>
+      <h3 class="text-center"><%= article.title.titleize %></h3>
+      <div class="row align-items-center">
+        <% if article.blog_assets.any? %>
+            <div class="col-sm-12 col-md-6">
+              <%= image_tag article.blog_assets.first.asset.url(:medium), class: 'responsive-img' %>
+            </div>
+        <% end %>
+        <div class="col-sm-12 col-md-6">
+          <%= raw article.body %>
+        </div>
+      </div>
+  <% end %>
 </div>

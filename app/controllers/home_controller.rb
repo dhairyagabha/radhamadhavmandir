@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @articles = Webmanager::Article.all
+    @articles = Webmanager::Article.tagged_with('home')
     @subscriber = Webmanager::NewsletterReceiver.new
   end
 

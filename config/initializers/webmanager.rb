@@ -1,0 +1,1 @@
+Webmanager.image_styles = {carousel: "1460X450", medium: "300x300>", thumb: "100x100>"}
