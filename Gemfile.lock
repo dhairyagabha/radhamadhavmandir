@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/dhairyagabha/webmanager.git
-  revision: 4fa2694018d6b0b9f2aabd8b2d8c8c4529b5142f
+  revision: 61785d0b10d4af9acceccf628435b6dbc9ae6744
   specs:
     webmanager (0.1.0)
       aws-sdk (~> 2.3)
