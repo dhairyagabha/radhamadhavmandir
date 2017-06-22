@@ -1,3 +1,6 @@
+<%= stylesheet_link_tag "/assets/social_wall/jquery.socialfeed.css", "/assets/social_wall/animate.css", media: 'all' %>
+<%= javascript_include_tag "/assets/social_wall/codebird.js", "/assets/social_wall/doT.js", "/assets/social_wall/moment.js", "/assets/social_wall/jquery.socialfeed.js", "/assets/social_wall/twitter.widgets.js", "/assets/social_wall/masonry.pkgd.min.js", media: 'all' %>
+
 <div class="container">
   <% @assets = Webmanager::BlogAsset.all %>
   <div class="row">
@@ -6,47 +9,51 @@
            data-title="<%= asset.created_at.to_formatted_s(:long) %>" href="<%= asset.asset.url(:original) %>" style="background-image: url('<%= asset.asset.url(:medium) %>');"></a>
     <% end %>
   </div>
-  <!--<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth":0, "itemSelector": ".box", "gutter":0  }'>-->
-  <!---->
-  <!--</div>-->
-  <div class="social-feed-container">
-  </div>
 </div>
+<section id="social-medial-wall" class="feed padding-lg">
+  <div class="container">
+    <div class="social-feed-container padding-md grid" id="social-feed-container">
+    </div>
+  </div>
+</section>
+
 <script>
-  $('.social-feed-container').socialfeed({
-    // FACEBOOK
-    facebook: {
-      accounts: ['@dhairya.gabhawala'],
-      limit: 12,
-      access_token: '1920380778233776|370ed66719c61acb237a5db3a0d140a3',
-      show_media: true
-    },
-    // GENERAL SETTINGS
-    length: 400,                                     //Integer: For posts with text longer than this length, show an ellipsis.
-    show_media: true,                                //Boolean: if false, doesn't display any post images
-    media_min_width: 300,                           //Integer: Only get posts with images larger than this value
-    update_period: 5000,                            //Integer: Number of seconds before social-feed will attempt to load new posts.
-    template: "bower_components/social-feed/template.html",                         //String: Filename used to get the post template.
-    template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
-        '<article class="twitter-post"> \
-        <h4>{{=it.author_name}}</h4><p>{{=it.text}}  \
-        <a href="{{=it.link}}" target="_blank">read more</a> \
-        </p> \
-        </article>',
-    date_format: "ll",                              //String: Display format of the date attribute (see http://momentjs.com/docs/#/displaying/format/)
-    date_locale: "en",                              //String: The locale of the date (see: http://momentjs.com/docs/#/i18n/changing-locale/)
-    moderation: function (content) {                 //Function: if returns false, template will have class hidden
-      return (content.text) ? content.text.indexOf('fuck') == -1 : true;
-    },
-    callback: function () {                          //Function: This is a callback function which is evoked when all the posts are collected and displayed
-      console.log("All posts collected!");
-    }
+  $(document).ready(function() {
+
+    var updateFeed = function() {
+      $('.social-feed-container').socialfeed({
+        // FACEBOOK
+        facebook: {
+          accounts: ['@TheRadhamadhavTemple'],
+          limit: 12,
+          access_token: '1920380778233776|7wDx2sk_0YViLZ25o-EW3XbI3O4',
+          show_media: true
+        },
+        // GENERAL SETTINGS
+        length: 1000,
+        media_min_width: 50,
+        // Moderation function - if returns false, template will have class hidden
+        moderation: function(content) {
+          return (content.text) ? content.text.indexOf('fuck') == -1 : true;
+        },
+        //update_period: 5000,
+        // When all the posts are collected and displayed - this function is evoked
+        callback: function() {
+          console.log('all posts are collected');
+          $('#social-medial-wall').show(0);
+          $('#social-feed-container .grid-item').addClass('animated zoomIn');
+          $('#social-feed-container').masonry({
+            // options
+            itemSelector: '.grid-item'
+          });
+
+
+        }
+      });
+    };
+
+    updateFeed();
+
+
   });
-
-
-  //  lightbox.option({
-  //    'resizeDuration': 200,
-  //    'wrapAround': true,
-  //    'positionFromTop': 50
-  //  })
 </script>

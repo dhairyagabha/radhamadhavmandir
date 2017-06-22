@@ -11,16 +11,57 @@
   <%= raw google_analytics(123) %>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <%= stylesheet_link_tag 'application', 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_link_tag '/assets/lightbox' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag '/assets/jquery.socialfeed.js' %>
 </head>
 
 <body>
 <%= render 'layouts/navigation' %>
 <div class="content">
+  <% if notice.present? %>
+      <p class="notice"><%= notice %></p>
+  <% end %>
   <%= yield %>
 </div>
 <%= render 'layouts/footer' %>
+<script>
+  $(document).ready(function () {
+
+    var updateFeed = function () {
+      $('.social-feed-container').socialfeed({
+        // FACEBOOK
+        facebook: {
+          accounts: ['@TheRadhamadhavTemple'],
+          limit: 12,
+          access_token: '1920380778233776|7wDx2sk_0YViLZ25o-EW3XbI3O4',
+          show_media: true
+        },
+        // GENERAL SETTINGS
+        length: 1000,
+        media_min_width: 50,
+        // Moderation function - if returns false, template will have class hidden
+        moderation: function (content) {
+          return (content.text) ? content.text.indexOf('fuck') == -1 : true;
+        },
+        //update_period: 5000,
+        // When all the posts are collected and displayed - this function is evoked
+        callback: function () {
+          console.log('all posts are collected');
+          $('#social-medial-wall').show(0);
+          $('#social-feed-container .grid-item').addClass('animated zoomIn');
+          $('#social-feed-container').masonry({
+            // options
+            itemSelector: '.grid-item'
+          });
+
+
+        }
+      });
+    };
+
+    updateFeed();
+
+
+  });
+</script>
 </body>
 </html>

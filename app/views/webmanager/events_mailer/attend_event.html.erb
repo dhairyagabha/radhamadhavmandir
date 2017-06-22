@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<p>Welcome to Radha Madhav Temple,<%= @email %></p>
+<p>
+  Radha Madhav Temple and Welspun Family invites you to attend <%= @event.name %>.<br>
+</p>
+<h3><%= @event.name %> by <%= @event.organizer %></h3>
+<p><%= @event.description %></p>
+<p>Location: <%= @event.location %></p>
+<p>Event Timings: <%= @event.start_date.to_formatted_s(:long) %> – <%= @event.end_date.to_formatted_s(:long) %></p>
+<p>Thanks for subscribing and have a great day!</p>
+</body>
+</html>

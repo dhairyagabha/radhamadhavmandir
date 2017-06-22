@@ -12,7 +12,7 @@ if (typeof Object.create !== 'function') {
 
         var defaults = {
             plugin_folder: '', // a folder in which the plugin is located (with a slash in the end)
-            template: 'template.html', // a path to the template file
+            template: '/fonts/theme/template.html', // a path to the template file
             show_media: false, // show images of attachments if available
             media_min_width: 300,
             length: 500, // maximum length of post message shown
@@ -94,6 +94,54 @@ if (typeof Object.create !== 'function') {
                     return '';
                 }
                 return string.replace(/(<([^>]+)>)|nbsp;|\s{2,}|/ig, "");
+            },
+            feedMoment: function(create_dt){
+                var days = parseInt(moment().diff(create_dt, 'days')),
+                    diff_date = moment.utc(moment().diff(create_dt)),
+                    h = parseInt(diff_date.format("H")),
+                    m = parseInt(diff_date.format("m"));
+                // or var hours = moment(end).diff(start, 'hours') % 24;
+
+                var dt = '',
+                    dayStr = " days ",
+                    hrStr = " hrs ",
+                    minStr = " mins ";
+
+
+                if(days == 1)
+                    dayStr = " day " ;
+
+                if(h == 1)
+                    hrStr = " hr ";
+
+                if(m == 1)
+                    minStr = " min ";
+
+                if(days > 0){
+
+                    dt = days+ dayStr;
+
+                    if(h >= 1){
+                        dt += " + " + h + hrStr;
+                    }else{
+                        if(m >= 1){
+                            dt += " + " + m + minStr;
+                        }
+                    }
+                }else{
+
+                    if(h > 0 ){
+                        dt += h+ hrStr;
+                    }
+
+                    if(m > 0){
+                        dt += " + "+ m + minStr;
+                    }else{
+                        dt = " in a min ";
+                    }
+                }
+
+                return dt+ " ago";
             }
         };
 
@@ -101,12 +149,12 @@ if (typeof Object.create !== 'function') {
             this.content = data;
             this.content.social_network = social_network;
             this.content.attachment = (this.content.attachment === undefined) ? '' : this.content.attachment;
-            this.content.time_ago = data.dt_create.fromNow();
+            this.content.time_ago = Utility.feedMoment(data.dt_create);
             this.content.date = data.dt_create.format(options.date_format);
             this.content.dt_create = this.content.dt_create.valueOf();
             this.content.text = Utility.wrapLinks(Utility.shorten(data.message + ' ' + data.description), data.social_network);
+            this.content.original_text = data.message + ' ' + data.description;
             this.content.moderation_passed = (options.moderation) ? options.moderation(this.content) : true;
-
             Feed[social_network].posts.push(this);
         }
         SocialFeedPost.prototype = {
@@ -130,11 +178,13 @@ if (typeof Object.create !== 'function') {
                         i++;
                     });
                     $(container).append(rendered_html);
+
                     if (insert_index >= 0) {
                         insert_index++;
                         var before = $(container).children('div:nth-child(' + insert_index + ')'),
                             current = $(container).children('div:last-child');
                         $(current).insertBefore(before);
+
                     }
 
                 }
@@ -265,18 +315,19 @@ if (typeof Object.create !== 'function') {
                     unifyPostData: function(element) {
                         var post = {};
                         if (element.id) {
-                            post.id = element.id;
+                            post.id = element.id_str;
                             //prevent a moment.js console warning due to Twitter's poor date format.
                             post.dt_create = moment(new Date(element.created_at));
                             post.author_link = 'http://twitter.com/' + element.user.screen_name;
                             post.author_picture = element.user.profile_image_url;
                             post.post_url = post.author_link + '/status/' + element.id_str;
                             post.author_name = element.user.name;
+                            post.screen_name = element.user.screen_name;
                             post.message = element.text;
                             post.description = '';
                             post.link = 'http://twitter.com/' + element.user.screen_name + '/status/' + element.id_str;
 
-                            if (options.show_media === true) {
+                            if (options.twitter.show_media === true) {
                                 if (element.entities.media && element.entities.media.length > 0) {
                                     var image_url = element.entities.media[0].media_url;
                                     if (image_url) {
@@ -298,7 +349,7 @@ if (typeof Object.create !== 'function') {
                         Utility.request(request_url, Feed.facebook.utility.getPosts);
                     };
                     var fields = '?fields=id,from,name,message,created_time,story,description,link';
-                       fields += (options.show_media === true)?',picture,object_id':'';
+                       fields += (options.facebook.show_media === true)?',picture,object_id':'';
                     var request_url, limit = '&limit=' + options.facebook.limit,
                         query_extention = '&access_token=' + options.facebook.access_token + '&callback=?';
                     switch (account[0]) {
@@ -373,7 +424,7 @@ if (typeof Object.create !== 'function') {
                         post.description = (element.description) ? element.description : '';
                         post.link = (element.link) ? element.link : 'http://facebook.com/' + element.from.id;
 
-                        if (options.show_media === true) {
+                        if (options.facebook.show_media === true) {
                             if (element.picture) {
                                 var attachment = Feed.facebook.utility.prepareAttachment(element);
                                 if (attachment) {
@@ -425,7 +476,7 @@ if (typeof Object.create !== 'function') {
                         post.author_picture = element.actor.image.url;
                         post.author_name = element.actor.displayName;
 
-                        if (options.show_media === true) {
+                        if (options.google.show_media === true) {
                             if (element.object.attachments) {
                                 $.each(element.object.attachments, function() {
                                     var image = '';
@@ -525,7 +576,7 @@ if (typeof Object.create !== 'function') {
                         post.message = (element.caption && element.caption) ? element.caption.text : '';
                         post.description = '';
                         post.link = element.link;
-                        if (options.show_media) {
+                        if (options.instagram.show_media) {
                             post.attachment = '<img class="attachment" src="' + element.images.standard_resolution.url + '' + '" />';
                         }
                         return post;
@@ -578,7 +629,7 @@ if (typeof Object.create !== 'function') {
                         post.dt_create = moment.unix(element.date);
                         post.description = ' ';
                         post.message = Utility.stripHTML(element.text);
-                        if (options.show_media) {
+                        if (options.vk.show_media) {
                             if (element.attachment) {
                                 if (element.attachment.type === 'link')
                                     post.attachment = '<img class="attachment" src="' + element.attachment.link.image_src + '" />';
@@ -706,7 +757,7 @@ if (typeof Object.create !== 'function') {
                         post.description = '';
                         post.social_network = 'pinterest';
                         post.link = element.link ? element.link : 'https://www.pinterest.com/pin/' + element.id;
-                        if (options.show_media) {
+                        if (options.pinterest.show_media) {
                             post.attachment = '<img class="attachment" src="' + element.image['original'].url + '" />';
                         }
                         return post;
@@ -745,7 +796,7 @@ if (typeof Object.create !== 'function') {
                         post.description = Utility.stripHTML(element.content);
                         post.social_network = 'rss';
                         post.link = element.link;
-                        if (options.show_media && element.mediaGroups ) {
+                        if (options.rss.show_media && element.mediaGroups ) {
                             post.attachment = '<img class="attachment" src="' + element.mediaGroups[0].contents[0].url + '" />';
                         }
                         return post;

@@ -72,8 +72,7 @@ Rails.application.configure do
       domain: ENV['DOMAIN'],
       user_name: ENV['EMAIL'],
       password: ENV['PASSWORD'],
-      authentication: 'plain',
-      enable_starttls_auto: true
+      authentication: 'plain'
   }
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
