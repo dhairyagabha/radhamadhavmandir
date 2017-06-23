@@ -80,11 +80,14 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.paperclip_defaults = {
-      :storage => :s3,
-      :bucket => ENV['BUCKET'],
-      :region => ENV['AWS_REGION'],
-      :s3_host_name => ENV['HOST_NAME'],
-      :s3_credentials => "#{Rails.root}/config/aws.yml",
+      storage: :s3,
+      s3_region: ENV['AWS_REGION'],
+      s3_host_name: ENV['HOST_NAME'],
+      s3_credentials: {
+          bucket: ENV['BUCKET'],
+          access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+          secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+      }
   }
 
 
