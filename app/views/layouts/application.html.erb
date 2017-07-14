@@ -23,45 +23,5 @@
   <%= yield %>
 </div>
 <%= render 'layouts/footer' %>
-<script>
-  $(document).ready(function () {
-
-    var updateFeed = function () {
-      $('.social-feed-container').socialfeed({
-        // FACEBOOK
-        facebook: {
-          accounts: ['@TheRadhamadhavTemple'],
-          limit: 12,
-          access_token: '1920380778233776|7wDx2sk_0YViLZ25o-EW3XbI3O4',
-          show_media: true
-        },
-        // GENERAL SETTINGS
-        length: 1000,
-        media_min_width: 50,
-        // Moderation function - if returns false, template will have class hidden
-        moderation: function (content) {
-          return (content.text) ? content.text.indexOf('fuck') == -1 : true;
-        },
-        //update_period: 5000,
-        // When all the posts are collected and displayed - this function is evoked
-        callback: function () {
-          console.log('all posts are collected');
-          $('#social-medial-wall').show(0);
-          $('#social-feed-container .grid-item').addClass('animated zoomIn');
-          $('#social-feed-container').masonry({
-            // options
-            itemSelector: '.grid-item'
-          });
-
-
-        }
-      });
-    };
-
-    updateFeed();
-
-
-  });
-</script>
 </body>
 </html>

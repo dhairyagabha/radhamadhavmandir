@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/dhairyagabha/webmanager.git
-  revision: 61785d0b10d4af9acceccf628435b6dbc9ae6744
+  revision: 2710e91baab7e686351c975c427843139289d695
   specs:
-    webmanager (0.1.0)
+    webmanager (1.0.0)
       aws-sdk (~> 2.3)
       devise
       jquery-rails
@@ -54,14 +54,14 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (7.1.1.2)
       execjs
-    aws-sdk (2.10.1)
-      aws-sdk-resources (= 2.10.1)
-    aws-sdk-core (2.10.1)
+    aws-sdk (2.10.11)
+      aws-sdk-resources (= 2.10.11)
+    aws-sdk-core (2.10.11)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.10.1)
-      aws-sdk-core (= 2.10.1)
-    aws-sigv4 (1.0.0)
+    aws-sdk-resources (2.10.11)
+      aws-sdk-core (= 2.10.11)
+    aws-sigv4 (1.0.1)
     bcrypt (3.1.11)
     bindex (0.5.0)
     bootstrap (4.0.0.alpha6)
@@ -236,4 +236,4 @@ DEPENDENCIES
   webmanager!
 
 BUNDLED WITH
-   1.13.6
+   1.15.1
