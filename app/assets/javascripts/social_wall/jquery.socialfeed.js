@@ -12,7 +12,7 @@ if (typeof Object.create !== 'function') {
 
         var defaults = {
             plugin_folder: '', // a folder in which the plugin is located (with a slash in the end)
-            template: '/fonts/theme/template.html', // a path to the template file
+            template: '/assets/template.html', // a path to the template file
             show_media: false, // show images of attachments if available
             media_min_width: 300,
             length: 500, // maximum length of post message shown
@@ -423,7 +423,6 @@ if (typeof Object.create !== 'function') {
                         post.message = (text) ? text : '';
                         post.description = (element.description) ? element.description : '';
                         post.link = (element.link) ? element.link : 'http://facebook.com/' + element.from.id;
-
                         if (options.facebook.show_media === true) {
                             if (element.picture) {
                                 var attachment = Feed.facebook.utility.prepareAttachment(element);

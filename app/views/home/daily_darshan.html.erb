@@ -1,52 +1,87 @@
 <%= stylesheet_link_tag "/assets/social_wall/jquery.socialfeed.css", "/assets/social_wall/animate.css", media: 'all' %>
-<%= javascript_include_tag "/assets/social_wall/codebird.js", "/assets/social_wall/doT.js", "/assets/social_wall/moment.js", "/assets/social_wall/jquery.socialfeed.js", "/assets/social_wall/twitter.widgets.js", "/assets/social_wall/masonry.pkgd.min.js", media: 'all' %>
-
-<div class="container">
-  <% @assets = Webmanager::BlogAsset.all %>
-  <div class="row">
-    <% @assets.each do |asset| %>
-        <a class="col-lg-4 col-md-6 col-sm-12 gallery-image example-image-link" data-lightbox="example-set"
-           data-title="<%= asset.created_at.to_formatted_s(:long) %>" href="<%= asset.asset.url(:original) %>" style="background-image: url('<%= asset.asset.url(:medium) %>');"></a>
-    <% end %>
+<%= javascript_include_tag "/assets/social_wall/doT.js", "/assets/social_wall/moment.js", "/assets/social_wall/jquery.socialfeed.js", "/assets/social_wall/twitter.widgets.js", "/assets/social_wall/masonry.pkgd.min.js", media: 'all' %>
+<!--<div class="jumbotron jumbotron-fluid jumbotron-no-padding">-->
+<!--<img src="https://placeimg.com/1446/400/nature "/>-->
+<!--</div>-->
+<div class="container primary-font" style="margin-top: 65px !important;">
+  <div class="col-sm-12">
+    <section id="social-medial-wall" class="feed padding-lg">
+      <div class="container">
+        <div class="social-feed-container padding-md grid" id="social-feed-container">
+        </div>
+      </div>
+    </section>
   </div>
 </div>
-<section id="social-medial-wall" class="feed padding-lg">
-  <div class="container">
-    <div class="social-feed-container padding-md grid" id="social-feed-container">
-    </div>
-  </div>
-</section>
+
 
 <script>
-  $(document).ready(function() {
+  $(document).ready(function () {
 
-    var updateFeed = function() {
+    var updateFeed = function () {
       $('.social-feed-container').socialfeed({
         // FACEBOOK
         facebook: {
+//          accounts: ['@TheEdgeAtDonaghey'],
           accounts: ['@TheRadhamadhavTemple'],
           limit: 12,
-          access_token: '1920380778233776|7wDx2sk_0YViLZ25o-EW3XbI3O4',
+//          access_token: '246932055646003|07ada32da2c81d2a08fa43e00ff6766a',
+          access_token: '744967052342034|57ee98b5e27d61f4554b3736e5f246b1',
           show_media: true
         },
         // GENERAL SETTINGS
         length: 1000,
+        date_format: "ll",                              //String: Display format of the date attribute (see http://momentjs.com/docs/#/displaying/format/)
+        date_locale: "en",                              //String: The locale of the date (see: http://momentjs.com/docs/#/i18n/changing-locale/)
         media_min_width: 50,
         // Moderation function - if returns false, template will have class hidden
-        moderation: function(content) {
+        moderation: function (content) {
           return (content.text) ? content.text.indexOf('fuck') == -1 : true;
         },
-        //update_period: 5000,
+//        update_period: 5000,
+        template: '',
+        template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
+            '<div class="grid-item social-feed-item {{? !it.moderation_passed}}hidden{{?}}" dt-create="{{=it.dt_create}}" social-feed-id = "{{=it.id}}">\
+              <div class="social-feed-element">\
+                {{? it.attachment}}\
+                <a target="_blank" href="{{=it.link}}">\
+                  {{=it.attachment}}\
+                </a>\
+                {{?}} \
+                <div class="content">\
+                  <div class="media-body">\
+                    <div class="text-wrapper">\
+                      <div class="social-feed-text facebook">\
+                        {{=it.text}}\
+                        <ul class="facebook-links list-inline">\
+                          <li><a target="_blank" href="https://twitter.com/intent/tweet?text={{=it.original_text}}&url={{=it.link}}&via="><i class="fa fa-twitter-square"></i></a></li>\
+                          <li><a target="_blank" href="https://plus.google.com/share?url={{=it.link}}"><i class="fa fa-google-plus-square"></i></a></li>\
+                        </ul>\
+                      </div>\
+                    </div>\
+                  </div>\
+                </div>\
+              </div>\
+                <div class="media-footer">\
+                  <div class="{{=it.social_network}} social-network">\
+                    <i class="fa fa-{{=it.social_network}} icon"></i>\
+                    <span>\
+                      {{=it.author_name}} posted {{=it.date}}\
+                    </span>\
+                  </div>\
+                </div>\
+              </div>\
+            </div>',
         // When all the posts are collected and displayed - this function is evoked
-        callback: function() {
+        callback: function () {
           console.log('all posts are collected');
           $('#social-medial-wall').show(0);
           $('#social-feed-container .grid-item').addClass('animated zoomIn');
           $('#social-feed-container').masonry({
             // options
-            itemSelector: '.grid-item'
+            itemSelector: '.grid-item',
+            columnWidth: 400
           });
-
 
         }
       });

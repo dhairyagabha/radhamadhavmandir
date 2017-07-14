@@ -223,7 +223,7 @@
 }
 
 #social-medial-wall{
-    display: none;
+    /*display: none;*/
 
 }
 #social-feed-container .grid-item{
@@ -240,4 +240,10 @@
 }
 .text-wrapper .twitter .twitter-text a:hover{
     color: #38aeae!important;
+}
+.grid-item {
+    width: 243.75px;
+}
+.grid-item--width2 {
+    width: 400px;
 }
