@@ -1,5 +1,5 @@
 <div class="jumbotron jumbotron-fluid jumbotron-no-padding">
-  <img src="https://placeimg.com/1446/400/nature "/>
+  <%= image_tag('contact-header.jpg') %>
 </div>
 <div class="container primary-font">
   <div class="col-md-12 col-lg-8 offset-lg-2">
@@ -7,7 +7,7 @@
     <p><%= @contact.description %></p>
     <%= form_for(Webmanager::FormResponse.new, url: '/webmanager/form_responses?method=post') do |f| %>
         <%= f.hidden_field :form_id, value: @contact.id %>
-        <%= f.fields_for :response do |builder|%>
+        <%= f.fields_for :response do |builder| %>
             <div class="form-group">
               <% @contact.form_fields.each do |contact_field| %>
                   <%= render "webmanager/form_fields/#{contact_field.as}", field: contact_field, f: builder %>
@@ -18,6 +18,24 @@
           <%= submit_tag 'Submit', class: 'btn btn-primary' %>
         </div>
     <% end -%>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-2">
+      <p>Uttam Sloka Das (Head Priest)</p>
+      <p>Phone: <a href="tel:+12402772010" itemprop="telephone">(240)277-2010</a></p>
+    </div>
+    <div class="col-md-6">
+      <p>Rajesh Chokhani (COO Welspun Tubular LLC.)</p>
+      <p>Phone: <a href="tel:+15015518995" itemprop="telephone">(501)551-8995</a></p>
+    </div>
+    <div class="col-md-4 offset-md-2">
+      <p>Adbhut Krishna Das (Priest)</p>
+      <p>Phone: <a href="tel:+15019029102" itemprop="telephone">(501)902-9102</a></p>
+    </div>
+    <div class="col-md-6">
+      <p>Mihir Desai (Temple Management)</p>
+      <p>Phone: <a href="tel:+15015909877" itemprop="telephone">(501)590-9877</a></p>
+    </div>
   </div>
   <p>
     <small>

@@ -12,12 +12,12 @@
   font-family: Roboto;
   src: url("assets/font/Roboto-Regular.woff");
 }
-/* line 8, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 8, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 html, body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
-/* line 12, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 12, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 pre {
   padding: .2rem .4rem;
   color: #bd4147;
@@ -25,88 +25,88 @@ pre {
   border-radius: .25rem;
 }
 
-/* line 19, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 19, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .bottom-margin {
   margin-bottom: 20px;
 }
 
-/* line 23, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 23, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 footer {
   background-color: #009688 !important;
   color: #ffffff !important;
   text-align: center !important;
 }
 
-/* line 29, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 29, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdl-data-table {
   font-size: 14px !important;
 }
 
-/* line 33, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 33, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdl-data-table th {
   text-align: center !important;
 }
 
-/* line 37, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 37, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdl-data-table tr td .mdl-button {
   margin-right: 20px;
 }
 
-/* line 41, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 41, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .text-center, .mdl-typography--text-center-custom {
   text-align: center !important;
 }
 
-/* line 45, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 45, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdl-typography--text-left-custom {
   text-align: left !important;
 }
 
-/* line 49, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 49, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdl-typography--text-right-custom {
   text-align: right !important;
 }
 
-/* line 53, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 53, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdl-card__published-date {
   padding: 8px 16px;
 }
-/* line 55, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 55, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdl-card__published-date h6 {
   margin: 0px;
 }
 
-/* line 60, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 60, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 span.select2.select2-container.select2-container--default {
   width: 60vw !important;
 }
 
-/* line 65, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 65, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .calendar-card .mdl-card__title {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
 }
-/* line 68, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 68, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .calendar-card .mdl-card__supporting-text {
   width: 100% !important;
   padding: 0px !important;
 }
-/* line 71, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 71, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .calendar-card .mdl-card__supporting-text table {
   width: 100% !important;
 }
-/* line 73, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 73, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .calendar-card .mdl-card__supporting-text table td.notmonth {
   color: #adadad;
 }
-/* line 76, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 76, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .calendar-card .mdl-card__supporting-text table td.today {
   background-color: #009688;
   color: white;
 }
 
-/* line 84, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 84, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .success {
   background-color: #DFF0D8;
   padding: 10px 15px;
@@ -115,33 +115,33 @@ span.select2.select2-container.select2-container--default {
   border-radius: 5px;
 }
 
-/* line 92, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 92, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 label.selected img {
   border: 1px solid #000;
 }
 
-/* line 96, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 96, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .js-masonry:after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* line 102, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 102, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .js-masonry .mdl-card {
   margin: 10px 5px;
   width: auto !important;
 }
 
-/* line 108, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 108, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .flex-checkboxes input[type=checkbox] {
   display: none;
 }
-/* line 111, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 111, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .flex-checkboxes label {
   display: inline;
 }
-/* line 113, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 113, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .flex-checkboxes label img {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -153,10 +153,15 @@ label.selected img {
   margin: auto auto !important;
 }
 
+/* line 123, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
+.mdl-card__full-body {
+  width: 97%;
+}
+
 /* TODO: Hover and Focus state.
  *       Fix position of mobile search button.
  */
-/* line 130, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 132, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search {
   margin: 0 50px;
   -webkit-box-align: center;
@@ -167,12 +172,12 @@ label.selected img {
           justify-content: center;
 }
 
-/* line 136, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 138, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search form {
   max-width: 1000px;
 }
 
-/* line 140, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 142, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search,
 .mdh-expandable-search form,
 .mdh-expandable-search input {
@@ -182,7 +187,7 @@ label.selected img {
   flex-grow: 1;
 }
 
-/* line 150, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 152, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search,
 .mdh-expandable-search form {
   /* Cross browser inline-flex */
@@ -192,7 +197,7 @@ label.selected img {
 }
 
 /* Position search icon */
-/* line 161, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 163, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search .material-icons {
   position: relative;
   right: -40px;
@@ -200,7 +205,7 @@ label.selected img {
   /* Remove the blank space left behind by the icon being relatively positioned */
 }
 
-/* line 167, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 169, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search input {
   outline: none;
   border: none;
@@ -215,13 +220,13 @@ label.selected img {
   -webkit-border-radius: 5px 5px 5px 5px;
 }
 
-/* line 182, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 184, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search input::-webkit-input-placeholder {
   /* WebKit browsers */
   color: #FFFFFF;
 }
 
-/* line 185, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 187, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search input:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #FFFFFF;
@@ -229,7 +234,7 @@ label.selected img {
   /* Firefox gives the placeholder a reduced opacity so we have to increase it */
 }
 
-/* line 189, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 191, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #FFFFFF;
@@ -237,7 +242,7 @@ label.selected img {
   /* Firefox gives the placeholder a reduced opacity so we have to increase it */
 }
 
-/* line 193, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-61785d0b10d4/app/assets/stylesheets/webmanager/custom.css.scss */
+/* line 195, /Users/dhairya/.rvm/gems/ruby-2.3.0/bundler/gems/webmanager-105118b09dca/app/assets/stylesheets/webmanager/custom.css.scss */
 .mdh-expandable-search input:-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #FFFFFF;
@@ -13592,7 +13597,7 @@ body .ui-tooltip {
 
 
 /*
-Trix 0.10.1
+Trix 0.10.2
 Copyright © 2017 Basecamp, LLC
 http://trix-editor.org/*/
 
@@ -13769,8 +13774,6 @@ trix-editor [data-trix-mutable=true] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  trix-editor [data-trix-mutable=true] ::-moz-selection {
-    background: none; }
   trix-editor [data-trix-mutable=true] img {
     -webkit-box-shadow: 0 0 0 2px highlight;
             box-shadow: 0 0 0 2px highlight; }
@@ -13778,6 +13781,12 @@ trix-editor [data-trix-mutable=true] {
     -webkit-box-shadow: 0 0 0 2px highlight;
             box-shadow: 0 0 0 2px highlight;
     border-color: transparent; }
+trix-editor [data-trix-mutable=true]::-moz-selection,
+trix-editor [data-trix-cursor-target]::-moz-selection {
+  background: none; }
+trix-editor [data-trix-mutable=true]::selection,
+trix-editor [data-trix-cursor-target]::selection {
+  background: none; }
 trix-editor .attachment:hover {
   cursor: default; }
 trix-editor .attachment.attachment-preview .caption:hover {

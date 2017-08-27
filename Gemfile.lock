@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/dhairyagabha/webmanager.git
-  revision: 5af9fc50b1ee42d49311c34062c8162dcb93dfd3
+  revision: 105118b09dcad87a7d4d0fc2086009a0e1604ee5
   specs:
     webmanager (1.0.0)
       aws-sdk (~> 2.3)
@@ -54,13 +54,13 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (7.1.2.3)
       execjs
-    aws-sdk (2.10.15)
-      aws-sdk-resources (= 2.10.15)
-    aws-sdk-core (2.10.15)
+    aws-sdk (2.10.34)
+      aws-sdk-resources (= 2.10.34)
+    aws-sdk-core (2.10.34)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.10.15)
-      aws-sdk-core (= 2.10.15)
+    aws-sdk-resources (2.10.34)
+      aws-sdk-core (= 2.10.34)
     aws-sigv4 (1.0.1)
     bcrypt (3.1.11)
     bindex (0.5.0)
