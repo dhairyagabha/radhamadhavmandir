@@ -16,18 +16,12 @@
         </div>
       </div>
       <div class="col-md-12 col-lg-6">
-
-
-        <%= form_tag('webmanager/newsletter_receivers', method: 'post') do -%>
-            <div class="form-group">
-              <%= label_tag :email, 'Sign up for an events newsletter: ' %>
-              <%= email_field_tag :email, nil, placeholder: "Type your email to get notified", name: 'newsletter_receiver[email]', class: 'form-control' %>
-              <%= hidden_field_tag :event_notification, true %>
-            </div>
-            <div class="form-group">
-              <%= submit_tag 'Subscribe', class: 'btn btn-primary' %>
-            </div>
-        <% end -%>
+        <%= form_for(Webmanager::NewsletterReceiver.new, url: 'webmanager/newsletter_receivers', method: 'post') do |f| %>
+            <%= f.label :email, 'Sign up for an events newsletter: ' %>
+            <%= f.text_field :email, placeholder: "Type your email to get notified",  class: 'form-control' %>
+            <%= f.hidden_field :event_notification, value: true %>
+            <%= f.submit %>
+        <% end %>
         <p>&copy; <%= Time.current.year %> Radha Madhav Temple &middot; <a href="#">Privacy</a> &middot;
           <a href="#">Terms</a>
         </p>

@@ -22,8 +22,8 @@
   <% if !@events.empty? %>
       <div id="accordion" role="tablist" aria-multiselectable="true">
         <% @events.each do |event| %>
-            <% id = "#{event.name.downcase.gsub(' ', '_')}_#{event.id}" %>
-            <% id_top = "#{event.name.downcase.gsub(' ', '_')}" %>
+            <% id = "#{event.name.downcase.gsub(' ', '_').gsub('(','').gsub(')','')}_#{event.id}" %>
+            <% id_top = "#{event.name.downcase.gsub(' ', '_').gsub('(','').gsub(')','')}" %>
             <div class="card events-card">
               <div class="card-header" role="tab" id="<%= id_top %>">
                 <h5 class="mb-0 col-12">
