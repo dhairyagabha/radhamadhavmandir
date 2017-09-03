@@ -2,7 +2,6 @@
 .social-feed-item{
     width: 23%;
     display: inline-block;
-    margin-right: 2% !important;
     vertical-align: top;
     margin-bottom: 20px;
     font-size: 12px !important;
@@ -11,6 +10,7 @@
     transition: 0.25s;
     -webkit-backface-visibility: hidden;
     background-color: #fff;
+    padding: 0px;
 }
 .social-feed-element{
     padding: 15px;
