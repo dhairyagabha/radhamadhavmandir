@@ -20,7 +20,7 @@
             <%= f.label :email, 'Sign up for an events newsletter: ' %>
             <%= f.text_field :email, placeholder: "Type your email to get notified",  class: 'form-control' %>
             <%= f.hidden_field :event_notification, value: true %>
-            <%= f.submit %>
+            <%= f.submit 'Subscribe', class:'btn btn-primary' %>
         <% end %>
         <p>&copy; <%= Time.current.year %> Radha Madhav Temple &middot; <a href="#">Privacy</a> &middot;
           <a href="#">Terms</a>
