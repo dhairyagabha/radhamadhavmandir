@@ -83,8 +83,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-#  <<: *default
-#  database: radhamadhav_development
-#  username: radhamadhav
-#  password: <%= ENV['RADHAMADHAV_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  <<: *default
+  database: radhamadhav_development
+  username: postgres
+  password: dhairya1997
+#  url: <%= ENV['DATABASE_URL'] %>
