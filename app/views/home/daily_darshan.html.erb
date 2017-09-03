@@ -7,7 +7,7 @@
   <div class="col-sm-12">
     <section id="social-medial-wall" class="feed padding-lg">
       <div class="container">
-        <div class="social-feed-container padding-md grid" id="social-feed-container">
+        <div class="social-feed-container padding-md grid row align-items-start" id="social-feed-container">
         </div>
       </div>
     </section>
@@ -41,7 +41,7 @@
 //        update_period: 5000,
         template: '',
         template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
-            '<div class="social-feed-item {{? !it.moderation_passed}}hidden{{?}} col-sm-4 col-xs-6 no-margin" dt-create="{{=it.dt_create}}" social-feed-id = "{{=it.id}}">\
+            '<div class="social-feed-item {{? !it.moderation_passed}}hidden{{?}} col-md-3 col-sm-6 col-12 no-margin" dt-create="{{=it.dt_create}}" social-feed-id = "{{=it.id}}">\
               <div class="social-feed-element">\
                 {{? it.attachment}}\
                 <a target="_blank" href="{{=it.link}}">\
