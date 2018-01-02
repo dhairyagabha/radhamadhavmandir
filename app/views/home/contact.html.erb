@@ -2,7 +2,7 @@
   <%= image_tag('contact-header.jpg') %>
 </div>
 <div class="container primary-font">
-  <div class="col-md-12 col-lg-8 offset-lg-2">
+  <div class="col-12">
     <h3>Contact Us</h3>
     <p><%= @contact.description %></p>
     <%= form_for(Webmanager::FormResponse.new, url: '/webmanager/form_responses?method=post') do |f| %>
@@ -20,17 +20,13 @@
     <% end -%>
   </div>
   <div class="row">
-    <div class="col-md-4 offset-md-2">
+    <div class="col-md-6">
       <p>Uttam Sloka Das (Head Priest)</p>
       <p>Phone: <a href="tel:+12402772010" itemprop="telephone">(240)277-2010</a></p>
     </div>
     <div class="col-md-6">
       <p>Rajesh Chokhani (COO Welspun Tubular LLC.)</p>
       <p>Phone: <a href="tel:+15015518995" itemprop="telephone">(501)551-8995</a></p>
-    </div>
-    <div class="col-md-4 offset-md-2">
-      <p>Adbhut Krishna Das (Priest)</p>
-      <p>Phone: <a href="tel:+15019029102" itemprop="telephone">(501)902-9102</a></p>
     </div>
     <div class="col-md-6">
       <p>Mihir Desai (Supply Chain Manager Welspun Tubular LLC.)</p>
