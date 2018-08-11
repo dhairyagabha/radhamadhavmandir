@@ -1,5 +1,6 @@
-PATH
-  remote: ../webmanager
+GIT
+  remote: https://github.com/dhairyagabha/webmanager.git
+  revision: d6b710ffb81887bbdf903f299d8bde356a69f6a3
   specs:
     webmanager (1.0.0)
       aws-sdk (~> 2.3)
@@ -53,20 +54,20 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (8.0.0)
       execjs
-    aws-sdk (2.11.5)
-      aws-sdk-resources (= 2.11.5)
-    aws-sdk-core (2.11.5)
+    aws-sdk (2.11.106)
+      aws-sdk-resources (= 2.11.106)
+    aws-sdk-core (2.11.106)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.11.5)
-      aws-sdk-core (= 2.11.5)
+    aws-sdk-resources (2.11.106)
+      aws-sdk-core (= 2.11.106)
     aws-ses (0.4.4)
       builder
       mail (> 2.2.5)
       mime-types
       xml-simple
-    aws-sigv4 (1.0.2)
-    bcrypt (3.1.11)
+    aws-sigv4 (1.0.3)
+    bcrypt (3.1.12)
     bindex (0.5.0)
     bootstrap (4.0.0)
       autoprefixer-rails (>= 6.0.3)
@@ -86,10 +87,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
-    devise (4.4.1)
+    devise (4.4.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.2)
+      railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
     erubi (1.7.0)
@@ -102,7 +103,7 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    jmespath (1.3.1)
+    jmespath (1.4.0)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
