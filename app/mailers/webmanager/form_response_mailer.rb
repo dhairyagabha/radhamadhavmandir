@@ -1,6 +1,6 @@
 module Webmanager
   class FormResponseMailer < ApplicationMailer
-    default from: 'help@webmanager.com'
+    default from: ENV['APP_EMAIL']
 
     def query_received(response)
       @response = response

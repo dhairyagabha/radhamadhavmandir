@@ -1,6 +1,6 @@
 module Webmanager
   class EventsMailer < ApplicationMailer
-    default from: 'help@webmanager.com'
+    default from: ENV['APP_EMAIL']
 
     def attend_event(email, event)
       @event = Event.find(event)
