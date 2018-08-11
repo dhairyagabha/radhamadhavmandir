@@ -1,7 +1,6 @@
 /* Plugin styles */
 .social-feed-item{
     width: 23%;
-    display: inline-block;
     vertical-align: top;
     margin-bottom: 20px;
     font-size: 12px !important;
@@ -11,6 +10,9 @@
     -webkit-backface-visibility: hidden;
     background-color: #fff;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .social-feed-element{
     padding: 15px;
